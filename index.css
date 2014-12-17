@@ -22,7 +22,9 @@ body {
 }
 
 .week__heading {
-	display: table-row;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
 }
 
 .day__header {
@@ -39,13 +41,9 @@ body {
 	border-left: 1px dotted #999;
 }
 
-.week__heading__container {
-	display: table-cell;
-	column-span: all;
-}
-
 .week {
-	display: table-row;
+	width: 100%;
+	display: table;
 }
 
 .day {
@@ -90,4 +88,11 @@ body {
 	font-size: 32px;
 	top: 1px;
 	right: 1px;
+}
+
+.detail-panel {
+	display: block;
+	height: 200px;
+	width: 100%;
+	background: #eff0ff;
 }
