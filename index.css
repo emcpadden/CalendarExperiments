@@ -1,0 +1,93 @@
+body {
+	font-family: sans-serif;
+	color: #333;
+	font-size: 12px;
+}
+
+.calendar {
+	width: 90%;
+	margin: 10px auto;
+}
+
+.month {
+	width: 100%;
+	display: table;
+}
+
+.month__heading {
+	display: block;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+}
+
+.week__heading {
+	display: table-row;
+}
+
+.day__header {
+	display: table-cell;
+	height: 20px;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px dotted #999;
+	border-bottom: 1px dotted #999;
+	border-right: 1px dotted #999;
+}
+
+.day__header:first-child {
+	border-left: 1px dotted #999;
+}
+
+.week__heading__container {
+	display: table-cell;
+	column-span: all;
+}
+
+.week {
+	display: table-row;
+}
+
+.day {
+	position: relative;
+	cursor: pointer;
+	display: table-cell;
+	border-bottom: 1px dotted #999;
+	border-right: 1px dotted #999;
+	width: 14%;
+	height: 150px;
+}
+
+.day--past {
+	background: #eeeeee;
+}
+
+.day--future {
+	background: #fafafa;
+}
+
+.day--today {
+
+}
+
+.day--next-month,
+.day--previous-month {
+	background: #cccccc;
+}
+
+.day:first-child {
+	border-left: 1px dotted #999;
+}
+
+.day__date {
+	font-size: 18px;
+	position: absolute;
+	top: 7px;
+	right: 7px;
+}
+
+.day--today .day__date {
+	font-size: 32px;
+	top: 1px;
+	right: 1px;
+}
