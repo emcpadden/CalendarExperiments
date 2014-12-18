@@ -32,28 +32,29 @@ body {
 	height: 20px;
 	font-weight: bold;
 	text-align: center;
-	border-top: 1px dotted #999;
-	border-bottom: 1px dotted #999;
-	border-right: 1px dotted #999;
 }
 
-.day__header:first-child {
-	border-left: 1px dotted #999;
-}
-
-.week {
+.week-container {
 	width: 100%;
 	display: table;
+	table-layout: fixed;
 }
 
-.day {
+.day-container {
 	position: relative;
 	cursor: pointer;
 	display: table-cell;
-	border-bottom: 1px dotted #999;
-	border-right: 1px dotted #999;
 	width: 14%;
 	height: 150px;
+	padding: 3px;
+}
+
+.day {
+	width: 100%;
+	height: 150px;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.5);
 }
 
 .day--past {
@@ -68,13 +69,13 @@ body {
 
 }
 
+.day--selected {
+
+}
+
 .day--next-month,
 .day--previous-month {
 	background: #cccccc;
-}
-
-.day:first-child {
-	border-left: 1px dotted #999;
 }
 
 .day__date {
